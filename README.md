@@ -25,3 +25,17 @@ Monthly orders grew consistently, with a clear Black Friday peak in November 201
 Office furniture averages just 3.55 stars. Bulky items are harder to deliver intact and on time — directly connecting to Finding 1.
 
 ## Project Structure
+olist-ecommerce-analysis/
+├── data/
+│   └── raw/          ← original Kaggle CSVs (not tracked by git)
+├── notebooks/
+│   ├── 01_data_overview.ipynb
+│   ├── 02_data_cleaning.ipynb
+│   └── 03_exploratory_analysis.ipynb
+├── outputs/          ← charts and exports (not tracked by git)
+└── README.md
+
+## Tools Used
+- Python (pandas, matplotlib, seaborn)
+- Jupyter Notebooks via VS Code
+- Git & GitHub
