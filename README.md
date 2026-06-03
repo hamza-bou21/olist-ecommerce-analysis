@@ -24,6 +24,12 @@ Monthly orders grew consistently, with a clear Black Friday peak in November 201
 ### 4. Furniture categories have the worst satisfaction despite high volume
 Office furniture averages just 3.55 stars. Bulky items are harder to deliver intact and on time — directly connecting to Finding 1.
 
+## Dashboard
+Built in Power BI Desktop — interactive dashboard with delivery analysis and business overview.
+
+![Page 1 - Delivery Analysis](outputs/dashboard_page1.jpg)
+![Page 2 - Business Overview](outputs/dashboard_page2.jpg)
+
 ## Project Structure
 
 ```

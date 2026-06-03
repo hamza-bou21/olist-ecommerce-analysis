@@ -1,5 +1,5 @@
 data/
-outputs/
+olist_clean.csv
 .ipynb_checkpoints/
 __pycache__/
 *.pyc
