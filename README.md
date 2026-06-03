@@ -30,6 +30,28 @@ Built in Power BI Desktop — interactive dashboard with delivery analysis and b
 ![Page 1 - Delivery Analysis](outputs/dashboard_page1.jpg)
 ![Page 2 - Business Overview](outputs/dashboard_page2.jpg)
 
+## Business Recommendations
+
+Based on the analysis, three actions would have the highest impact on customer satisfaction:
+
+1. **Prioritize on-time delivery for furniture and bulky items** — these categories combine high order volume with the lowest satisfaction scores, driven by delivery failures.
+2. **Set more accurate delivery estimates** — customers are highly sensitive to late arrivals. Even 1–10 days late drops average scores from 4.16 to 2.50. Tighter estimates reduce disappointment.
+3. **Focus retention efforts on November** — Black Friday drives the highest order volume. Ensuring delivery capacity during this period protects the platform's most critical sales window.
+
+## Key Skills Demonstrated
+- Python (pandas, matplotlib, seaborn)
+- Data cleaning & feature engineering
+- Exploratory data analysis
+- Power BI & DAX
+- Git & GitHub
+- Business storytelling with data
+
+## How to Run
+1. Clone this repository
+2. Download the [Olist dataset from Kaggle](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce) and place CSVs in `data/raw/`
+3. Run notebooks in order: `01` → `02` → `03`
+4. Open `dashboard/olist_dashboard.pbix` in Power BI Desktop
+
 ## Project Structure
 
 ```
