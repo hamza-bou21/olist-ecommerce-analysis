@@ -1,6 +1,6 @@
 # Olist E-Commerce Analysis
 
-## Overview
+🚀 **Live Interactive Web App:** [Olist Delivery Delay Predictor](https://olist-ecommerce-analysis-rf.streamlit.app/)
 ## Overview
 An end-to-end data science project on the Olist Brazilian E-Commerce dataset (99,000+ orders from 2016–2018). This project spans the entire data lifecycle: from data cleaning and exploratory analysis to an interactive Power BI dashboard and **predictive machine learning models to forecast delivery delays.**
 
@@ -77,6 +77,10 @@ olist-ecommerce-analysis/
 │   ├── 02_data_cleaning.ipynb
 │   ├── 03_exploratory_analysis.ipynb
 │   └── 04_predictive_modeling.ipynb  ← Predictive AI Pipeline
+├── app.py            ← Streamlit Web Application Interface
+├── requirements.txt  ← Cloud Server Dependencies
+├── rf_delivery_model.pkl  ← Serialized Trained Model
+├── model_columns.pkl      ← Serialized Matrix Schema
 ├── outputs/          ← charts and exports (not tracked by git)
 └── README.md
 ```
