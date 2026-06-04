@@ -7,7 +7,7 @@ import numpy as np
 st.set_page_config(
     page_title="Olist Delivery Delay Predictor", 
     page_icon="🚚",
-    layout="centered"
+    layout="wide"
 )
 
 st.title("🚚 Olist Delivery Delay Predictor")
