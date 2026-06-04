@@ -1,7 +1,8 @@
 # Olist E-Commerce Analysis
 
 ## Overview
-Exploratory data analysis of the Olist Brazilian E-Commerce dataset, covering 99,000+ orders placed between September 2016 and October 2018.
+## Overview
+An end-to-end data science project on the Olist Brazilian E-Commerce dataset (99,000+ orders from 2016–2018). This project spans the entire data lifecycle: from data cleaning and exploratory analysis to an interactive Power BI dashboard and **predictive machine learning models to forecast delivery delays.**
 
 The goal of this project is to uncover actionable insights around customer satisfaction, delivery performance, and product category trends.
 
@@ -24,12 +25,22 @@ Monthly orders grew consistently, with a clear Black Friday peak in November 201
 ### 4. Furniture categories have the worst satisfaction despite high volume
 Office furniture averages just 3.55 stars. Bulky items are harder to deliver intact and on time — directly connecting to Finding 1.
 
+### 5. Freight cost and product weight are the biggest predictors of shipping delays
+Using Machine Learning feature importance, the predictive models revealed that package weight (`product_weight_g`) and shipping cost (`freight_value`) are the primary drivers of delivery delays, far outweighing product category or customer location. Heavy, expensive-to-ship items are disproportionately vulnerable to logistics failures.
+
 ## Dashboard
 Built in Power BI Desktop — interactive dashboard with delivery analysis and business overview.
 
 ![Page 1 - Delivery Analysis](outputs/dashboard_page1.jpg)
 ![Page 2 - Business Overview](outputs/dashboard_page2.jpg)
 
+## Predictive Modeling (Machine Learning)
+Built a predictive pipeline to forecast whether an order will be delayed (`is_delayed = 1`) before it ships, handling a severe class imbalance (only 6.4% of historical orders were delayed).
+
+* **Models Evaluated:** Random Forest Classifier (Baseline) vs. XGBoost Classifier (Challenger)
+* **The Precision-Recall Trade-off:** * The **Random Forest** optimized for higher **Precision (17%)**, minimizing false alarms.
+  * **XGBoost** optimized for higher **Recall (54%)**, successfully catching over half of all actual delays by using weighted class parameters (`scale_pos_weight`).
+* **Feature Importance:** The models determined that continuous financial and physical attributes (`freight_value`, `product_weight_g`, `price`) hold the highest predictive power for delivery disruptions.
 ## Business Recommendations
 
 Based on the analysis, three actions would have the highest impact on customer satisfaction:
@@ -45,11 +56,14 @@ Based on the analysis, three actions would have the highest impact on customer s
 - Power BI & DAX
 - Git & GitHub
 - Business storytelling with data
+- Machine Learning (Classification)
+- Model Evaluation (Precision/Recall)
+- XGBoost & Random Forest
 
 ## How to Run
 1. Clone this repository
 2. Download the [Olist dataset from Kaggle](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce) and place CSVs in `data/raw/`
-3. Run notebooks in order: `01` → `02` → `03`
+3. Run notebooks in order: `01` → `02` → `03`→ `04` 
 4. Open `dashboard/olist_dashboard.pbix` in Power BI Desktop
 
 ## Project Structure
@@ -61,12 +75,13 @@ olist-ecommerce-analysis/
 ├── notebooks/
 │   ├── 01_data_overview.ipynb
 │   ├── 02_data_cleaning.ipynb
-│   └── 03_exploratory_analysis.ipynb
+│   ├── 03_exploratory_analysis.ipynb
+│   └── 04_predictive_modeling.ipynb  ← Predictive AI Pipeline
 ├── outputs/          ← charts and exports (not tracked by git)
 └── README.md
 ```
 
 ## Tools Used
-- Python (pandas, matplotlib, seaborn)
+- Python (pandas, matplotlib, seaborn, scikit-learn, xgboost )
 - Jupyter Notebooks via VS Code
 - Git & GitHub
